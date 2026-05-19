@@ -8,7 +8,7 @@
 
     <ul class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 list-none p-0 m-0">
       @for (o of orgs; track o.nameKey) {
-        <li class="px-5 py-4 bg-bg-soft border-l-4 border-primary text-ink font-medium text-[15px]">{{ t(o.nameKey) }}</li>
+        <li class="px-5 py-4 bg-white border border-line border-l-4 border-l-primary text-ink font-medium text-[15px] rounded-2xl shadow-[0_6px_20px_-14px_rgba(10,30,80,0.18)] hover:border-primary hover:border-l-primary transition-colors">{{ t(o.nameKey) }}</li>
       }
     </ul>
   </div>

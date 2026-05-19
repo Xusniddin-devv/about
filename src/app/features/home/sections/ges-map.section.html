@@ -7,9 +7,9 @@
       <p class="text-ink-soft text-[1.05rem] leading-[1.65] max-w-[640px] mt-4">{{ t('gesMap.sub') }}</p>
     </div>
 
-    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-line-strong border border-line-strong">
+    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       @for (r of regions; track r.nameKey) {
-        <div class="bg-white p-5 flex flex-col gap-1.5">
+        <div class="bg-white border border-line p-5 flex flex-col gap-1.5 rounded-2xl shadow-[0_6px_20px_-12px_rgba(10,30,80,0.18)] hover:border-primary transition-colors">
           <div class="font-display font-semibold text-ink text-[15px]">{{ t(r.nameKey) }}</div>
           @if (r.capacityMw !== null) {
             <div class="text-ink-soft text-sm">{{ t('gesMap.capacity') }}: <span class="font-medium text-ink">{{ formatMw(r.capacityMw) }} {{ t('gesMap.mw') }}</span></div>
@@ -21,7 +21,7 @@
       }
     </div>
 
-    <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 bg-ink text-white p-6 gap-2">
+    <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 bg-ink text-white p-6 gap-2 rounded-2xl shadow-[0_12px_40px_-20px_rgba(10,30,80,0.5)]">
       <div>
         <div class="font-display text-xs tracking-[0.18em] uppercase text-accent">{{ t('gesMap.totalCapacity') }}</div>
         <div class="font-display font-bold text-2xl mt-1">{{ formatMw(total.capacityMw) }} {{ t('gesMap.mw') }}</div>

@@ -11,7 +11,7 @@
 
     <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4">
       @for (p of photos; track p.src) {
-        <figure class="relative group overflow-hidden bg-white border border-line">
+        <figure class="relative group overflow-hidden bg-white border border-line rounded-2xl shadow-[0_8px_24px_-16px_rgba(10,30,80,0.22)]">
           <img [src]="p.src" [alt]="t(p.captionKey)" class="aspect-[4/3] object-cover w-full transition-transform duration-500 group-hover:scale-105" />
           <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 to-transparent text-white font-display font-medium text-sm px-4 py-3">{{ t(p.captionKey) }}</figcaption>
         </figure>

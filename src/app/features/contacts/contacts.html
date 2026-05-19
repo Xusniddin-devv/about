@@ -44,7 +44,7 @@
       </div>
     </div>
 
-    <div #mapBox class="relative bg-bg-soft border border-line-strong overflow-hidden aspect-[4/3]">
+    <div #mapBox class="relative bg-bg-soft border border-line-strong overflow-hidden aspect-[4/3] rounded-2xl shadow-[0_12px_36px_-20px_rgba(10,30,80,0.28)]">
       @if (mapVisible()) {
         <iframe
           [title]="t('contacts.mapTitle')"
@@ -58,7 +58,7 @@
           {{ t('contacts.mapLoading') }}
         </div>
       }
-      <a class="absolute left-0 bottom-0 bg-ink text-white font-display font-medium text-xs tracking-[0.14em] uppercase px-4 py-3 hover:bg-primary transition-colors z-10"
+      <a class="absolute left-3 bottom-3 bg-ink text-white font-display font-medium text-xs tracking-[0.14em] uppercase px-4 py-2.5 rounded-full hover:bg-primary transition-colors z-10 shadow-[0_8px_20px_-8px_rgba(10,30,80,0.5)]"
          [href]="contact.mapLink" target="_blank" rel="noopener">
         {{ t('contacts.openMap') }}
       </a>
@@ -75,7 +75,7 @@
     </div>
 
     @if (submitted()) {
-      <div class="mt-10 bg-emerald-50 border border-emerald-300 p-6 flex items-start gap-4">
+      <div class="mt-10 bg-emerald-50 border border-emerald-300 p-6 flex items-start gap-4 rounded-2xl shadow-[0_8px_24px_-16px_rgba(16,185,129,0.35)]">
         <svg viewBox="0 0 24 24" class="w-6 h-6 text-emerald-600 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
         <div class="flex-1">
           <h3 class="font-display font-semibold text-ink">{{ t('contacts.successTitle') }}</h3>
@@ -88,7 +88,7 @@
         <label class="flex flex-col gap-2">
           <span class="font-display text-xs tracking-[0.14em] uppercase text-ink-soft">{{ t('contacts.fName') }} *</span>
           <input type="text" formControlName="name"
-                 class="bg-white border border-line-strong px-4 py-3 font-sans text-ink focus:outline-none focus:border-primary transition-colors"
+                 class="bg-white border border-line-strong px-4 py-3 rounded-xl font-sans text-ink focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all"
                  [class.border-red-500]="form.controls.name.invalid && form.controls.name.touched" />
           @if (form.controls.name.invalid && form.controls.name.touched) {
             <span class="text-xs text-red-600">{{ t('contacts.fNameError') }}</span>
@@ -98,7 +98,7 @@
         <label class="flex flex-col gap-2">
           <span class="font-display text-xs tracking-[0.14em] uppercase text-ink-soft">{{ t('contacts.fEmail') }} *</span>
           <input type="email" formControlName="email"
-                 class="bg-white border border-line-strong px-4 py-3 font-sans text-ink focus:outline-none focus:border-primary transition-colors"
+                 class="bg-white border border-line-strong px-4 py-3 rounded-xl font-sans text-ink focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all"
                  [class.border-red-500]="form.controls.email.invalid && form.controls.email.touched" />
           @if (form.controls.email.invalid && form.controls.email.touched) {
             <span class="text-xs text-red-600">{{ t('contacts.fEmailError') }}</span>
@@ -108,13 +108,13 @@
         <label class="flex flex-col gap-2">
           <span class="font-display text-xs tracking-[0.14em] uppercase text-ink-soft">{{ t('contacts.fPhone') }}</span>
           <input type="tel" formControlName="phone"
-                 class="bg-white border border-line-strong px-4 py-3 font-sans text-ink focus:outline-none focus:border-primary transition-colors" />
+                 class="bg-white border border-line-strong px-4 py-3 rounded-xl font-sans text-ink focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all" />
         </label>
 
         <label class="flex flex-col gap-2">
           <span class="font-display text-xs tracking-[0.14em] uppercase text-ink-soft">{{ t('contacts.fSubject') }} *</span>
           <input type="text" formControlName="subject"
-                 class="bg-white border border-line-strong px-4 py-3 font-sans text-ink focus:outline-none focus:border-primary transition-colors"
+                 class="bg-white border border-line-strong px-4 py-3 rounded-xl font-sans text-ink focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all"
                  [class.border-red-500]="form.controls.subject.invalid && form.controls.subject.touched" />
           @if (form.controls.subject.invalid && form.controls.subject.touched) {
             <span class="text-xs text-red-600">{{ t('contacts.fSubjectError') }}</span>
@@ -124,7 +124,7 @@
         <label class="md:col-span-2 flex flex-col gap-2">
           <span class="font-display text-xs tracking-[0.14em] uppercase text-ink-soft">{{ t('contacts.fMessage') }} *</span>
           <textarea formControlName="message" rows="6"
-                    class="bg-white border border-line-strong px-4 py-3 font-sans text-ink focus:outline-none focus:border-primary transition-colors resize-y"
+                    class="bg-white border border-line-strong px-4 py-3 rounded-2xl font-sans text-ink focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all resize-y"
                     [class.border-red-500]="form.controls.message.invalid && form.controls.message.touched"></textarea>
           @if (form.controls.message.invalid && form.controls.message.touched) {
             <span class="text-xs text-red-600">{{ t('contacts.fMessageError') }}</span>
@@ -132,7 +132,7 @@
         </label>
 
         @if (error()) {
-          <div class="md:col-span-2 bg-red-50 border border-red-300 px-4 py-3 text-sm text-red-700">
+          <div class="md:col-span-2 bg-red-50 border border-red-300 px-4 py-3 text-sm text-red-700 rounded-xl">
             {{ t('contacts.formErrorBanner') }}
           </div>
         }

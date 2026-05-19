@@ -1,5 +1,5 @@
 <ng-container *transloco="let t">
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-line">
+<header class="sticky top-0 z-50 bg-white/55 backdrop-blur-2xl backdrop-saturate-150 border-b border-white/40 shadow-[0_1px_0_rgba(255,255,255,0.6)_inset,0_8px_24px_-12px_rgba(10,30,80,0.12)]">
   <div class="px-16 flex justify-between items-center gap-8 h-24">
     <a routerLink="/" class="inline-flex items-center gap-4 shrink-0" aria-label="Gidroqurilish">
       <img class="h-16 w-auto object-contain shrink-0" src="/images/logonew.png" alt="Gidroqurilish" />
@@ -10,31 +10,31 @@
     </a>
 
     <div class="inline-flex items-center gap-3 shrink-0">
-      <nav class="hidden xl:inline-flex" aria-label="Primary">
+      <nav class="hidden xl:inline-flex gap-2" aria-label="Primary">
         @for (item of navItems; track item.labelKey) {
           @if (item.children) {
             <div class="relative">
               <button
                 type="button"
                 (click)="toggle(item.labelKey)"
-                [class.!bg-ink]="openMenu() === item.labelKey"
-                [class.!text-white]="openMenu() === item.labelKey"
-                [class.!border-ink]="openMenu() === item.labelKey"
-                class="inline-flex items-center gap-1.5 px-5 py-3 font-display text-[13px] font-medium tracking-[0.04em] text-ink border border-line-strong bg-transparent transition-colors hover:bg-bg-soft -ml-px first:ml-0 whitespace-nowrap cursor-pointer">
+                [class]="openMenu() === item.labelKey
+                  ? 'bg-ink/85 text-white border-white/15 shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_6px_20px_-6px_rgba(10,30,80,0.35)]'
+                  : 'bg-white/35 text-ink border-white/55 hover:bg-white/55 shadow-[inset_0_1px_0_rgba(255,255,255,0.7),0_4px_16px_-8px_rgba(10,30,80,0.18)]'"
+                class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full backdrop-blur-xl backdrop-saturate-150 border font-display text-[13px] font-medium tracking-[0.04em] transition-all duration-200 whitespace-nowrap cursor-pointer hover:-translate-y-px active:translate-y-0 active:scale-[0.98]">
                 {{ t(item.labelKey) }}
                 <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 transition-transform" [class.rotate-180]="openMenu() === item.labelKey" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
               </button>
 
               @if (openMenu() === item.labelKey) {
-                <ul class="absolute left-0 top-full mt-px min-w-[280px] bg-white border border-line-strong shadow-lg list-none p-0 z-50">
+                <ul class="absolute left-0 top-full mt-2 min-w-[280px] bg-white/75 backdrop-blur-2xl backdrop-saturate-150 border border-white/60 rounded-2xl shadow-[inset_0_1px_0_rgba(255,255,255,0.8),0_18px_40px_-12px_rgba(10,30,80,0.25)] list-none p-1.5 z-50 overflow-hidden">
                   @for (child of item.children; track child.path) {
                     <li>
                       <a
                         [routerLink]="child.path"
                         (click)="close()"
-                        routerLinkActive="!bg-bg-soft !text-primary"
+                        routerLinkActive="!bg-primary/10 !text-primary"
                         [routerLinkActiveOptions]="{ exact: true }"
-                        class="block px-5 py-3 font-display text-[13px] text-ink hover:bg-bg-soft border-b border-line last:border-b-0 transition-colors">
+                        class="block px-4 py-2.5 rounded-xl font-display text-[13px] text-ink hover:bg-white/70 transition-colors">
                         {{ t(child.labelKey) }}
                       </a>
                     </li>
@@ -45,24 +45,24 @@
           } @else {
             <a
               [routerLink]="item.path"
-              routerLinkActive="!bg-ink !text-white !border-ink"
+              routerLinkActive="!bg-ink/85 !text-white !border-white/15 !shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_6px_20px_-6px_rgba(10,30,80,0.35)]"
               [routerLinkActiveOptions]="{ exact: item.path === '/' }"
-              class="inline-flex items-center justify-center px-5 py-3 font-display text-[13px] font-medium tracking-[0.04em] text-ink border border-line-strong bg-transparent transition-colors hover:bg-bg-soft -ml-px first:ml-0 whitespace-nowrap">
+              class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-white/35 backdrop-blur-xl backdrop-saturate-150 border border-white/55 font-display text-[13px] font-medium tracking-[0.04em] text-ink transition-all duration-200 hover:bg-white/55 hover:-translate-y-px active:translate-y-0 active:scale-[0.98] whitespace-nowrap shadow-[inset_0_1px_0_rgba(255,255,255,0.7),0_4px_16px_-8px_rgba(10,30,80,0.18)]">
               {{ t(item.labelKey) }}
             </a>
           }
         }
       </nav>
 
-      <div class="inline-flex border border-line-strong">
+      <div class="inline-flex p-1 gap-0.5 rounded-full bg-white/35 backdrop-blur-xl backdrop-saturate-150 border border-white/55 shadow-[inset_0_1px_0_rgba(255,255,255,0.7),0_4px_16px_-8px_rgba(10,30,80,0.18)]">
         @for (l of lang.availableLangs; track l) {
           <button
             type="button"
             (click)="lang.setLang(l)"
             [class]="lang.lang() === l
-              ? 'bg-ink text-white'
-              : 'bg-transparent text-ink-soft hover:bg-bg-soft'"
-            class="border-0 px-3 py-3 font-display text-xs font-medium tracking-[0.08em] border-r border-line-strong last:border-r-0 transition-colors cursor-pointer">
+              ? 'bg-ink/85 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.18)]'
+              : 'bg-transparent text-ink-soft hover:bg-white/55'"
+            class="px-3 py-1.5 rounded-full font-display text-xs font-semibold tracking-[0.08em] transition-all duration-200 cursor-pointer">
             {{ l.toUpperCase() }}
           </button>
         }
