@@ -1,0 +1,32 @@
+<ng-container *transloco="let t">
+<footer class="bg-[#06122b] text-white/65 pt-16 pb-7">
+  <div class="container-site grid gap-12 md:grid-cols-3 lg:grid-cols-[1.6fr_1fr_1fr]">
+    <div>
+      <div class="font-display font-semibold text-xl text-white">
+        <strong class="text-white font-semibold">Gidroqurilish</strong>
+      </div>
+      <p class="mt-4 text-sm max-w-[340px] leading-relaxed">{{ t('footer.tag') }}</p>
+    </div>
+
+    <div>
+      <h4 class="text-white text-[13px] font-semibold tracking-[0.16em] uppercase mb-4 font-display">{{ t('footer.contacts') }}</h4>
+      <a href="#location" class="block text-sm py-1 hover:text-accent transition-colors">{{ t('location.addressVal') }}</a>
+      <a href="tel:+998710000000" class="block text-sm py-1 hover:text-accent transition-colors">+998 (71) 000-00-00</a>
+      <a href="mailto:info&#64;gidroqurilish.uz" class="block text-sm py-1 hover:text-accent transition-colors">info&#64;gidroqurilish.uz</a>
+    </div>
+
+    <div>
+      <h4 class="text-white text-[13px] font-semibold tracking-[0.16em] uppercase mb-4 font-display">{{ t('footer.langs') }}</h4>
+      @for (l of lang.availableLangs; track l) {
+        <a href="#" (click)="lang.setLang(l); $event.preventDefault()" class="block text-sm py-1 hover:text-accent transition-colors">
+          {{ langLabel(l) }}
+        </a>
+      }
+    </div>
+  </div>
+  <div class="container-site mt-12 pt-5 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-2 text-xs text-white/45 tracking-[0.04em]">
+    <span>© {{ year }} {{ t('footer.copy') }}</span>
+    <span>{{ t('footer.sub') }}</span>
+  </div>
+</footer>
+</ng-container>

@@ -1,0 +1,30 @@
+<ng-container *transloco="let t">
+<section class="relative min-h-[calc(100vh-96px)] flex items-end text-white overflow-hidden">
+  <div class="absolute inset-0 bg-[url('/hero.jpg')] bg-cover bg-center" style="filter: grayscale(15%) contrast(1.05);" aria-hidden="true"></div>
+  <div class="absolute inset-0" aria-hidden="true"
+       style="background:
+         linear-gradient(180deg, rgba(6,20,50,0.35) 0%, rgba(6,20,50,0.55) 55%, rgba(6,20,50,0.85) 100%),
+         linear-gradient(120deg, rgba(10,61,143,0.45), transparent 60%);"></div>
+
+  <div class="relative w-full pr-7" style="padding-left: clamp(28px, 8vw, 140px);">
+    <div class="relative grid gap-6 max-w-[820px] py-16 pb-18">
+      <div class="flex gap-5 items-center font-display font-medium text-xs tracking-[0.28em] uppercase text-white/80">
+        <span class="pr-5 border-r border-white/30">{{ t('hero.meta1') }}</span>
+        <span>{{ t('hero.meta2') }}</span>
+      </div>
+
+      <h1 class="font-display font-bold leading-[1.05] tracking-[-0.02em] text-white text-[clamp(2.4rem,5vw,4.2rem)]">
+        {{ t('hero.titleA') }}<br>
+        {{ t('hero.titleB') }} <em class="italic font-medium text-accent">{{ t('hero.titleC') }}</em>
+      </h1>
+
+      <p class="text-[clamp(1rem,1.3vw,1.18rem)] leading-relaxed text-white/90 max-w-[620px] m-0">{{ t('hero.lead') }}</p>
+
+      <div class="flex gap-3.5 flex-wrap mt-2">
+        <a class="btn btn-accent" href="#priorities">{{ t('hero.cta1') }}</a>
+        <a class="btn btn-ghost" href="#news">{{ t('hero.cta2') }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+</ng-container>

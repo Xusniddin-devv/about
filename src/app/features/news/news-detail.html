@@ -1,0 +1,50 @@
+<ng-container *transloco="let t">
+@if (item(); as n) {
+  <article class="py-16">
+    <div class="container-site max-w-[920px]">
+      <a routerLink="/news" class="inline-flex items-center gap-2 text-sm font-display font-medium text-primary hover:text-primary-dark">
+        <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        {{ t('news.backToAll') }}
+      </a>
+
+      <div class="mt-6 flex gap-3 items-center text-xs text-muted font-display tracking-[0.08em]">
+        <span class="bg-ink text-white px-2.5 py-1 uppercase font-semibold">{{ n.category }}</span>
+        <time>{{ n.date }}</time>
+        <span>·</span>
+        <span>{{ n.views }} {{ t('news.views') }}</span>
+      </div>
+
+      <h1 class="mt-5 font-display font-bold text-ink leading-[1.2] text-[clamp(1.8rem,3.5vw,2.6rem)]">{{ n.title }}</h1>
+
+      <img [src]="n.image" [alt]="n.title" class="mt-8 w-full aspect-[16/9] object-cover bg-bg-soft" />
+
+      <div class="mt-8 flex flex-col gap-5 text-ink-soft text-[1.05rem] leading-[1.8]">
+        @for (p of n.body; track $index) {
+          <p class="m-0">{{ p }}</p>
+        }
+      </div>
+    </div>
+  </article>
+
+  <section class="py-16 bg-bg-soft border-t border-line">
+    <div class="container-site max-w-[920px]">
+      <h2 class="font-display font-bold text-ink text-xl">{{ t('news.related') }}</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-5">
+        @for (r of related(); track r.id) {
+          <a [routerLink]="['/news', r.id]" class="group bg-white border border-line p-5 hover:border-primary transition-colors">
+            <time class="font-display text-xs text-muted tracking-[0.08em]">{{ r.date }}</time>
+            <h3 class="mt-2 font-display font-semibold text-ink text-[15px] leading-snug line-clamp-3">{{ r.title }}</h3>
+          </a>
+        }
+      </div>
+    </div>
+  </section>
+} @else {
+  <section class="py-24">
+    <div class="container-site">
+      <h1 class="font-display font-bold text-ink text-3xl">{{ t('news.notFound') }}</h1>
+      <a routerLink="/news" class="mt-4 inline-block btn btn-accent">{{ t('news.backToAll') }}</a>
+    </div>
+  </section>
+}
+</ng-container>

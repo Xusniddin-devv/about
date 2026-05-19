@@ -1,0 +1,32 @@
+<ng-container *transloco="let t">
+<section class="py-24" id="tenders">
+  <div class="container-site">
+    <div class="flex flex-wrap justify-between items-end gap-6">
+      <div class="max-w-[720px]">
+        <span class="section-tag">{{ t('tendersList.tag') }}</span>
+        <h2 class="font-display font-bold text-ink tracking-[-0.02em] leading-[1.15] text-[clamp(1.8rem,3vw,2.5rem)]">{{ t('tendersList.title') }}</h2>
+      </div>
+      <a routerLink="/tenders" class="btn btn-accent">{{ t('tendersList.all') }}</a>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+      @for (it of items; track it.titleKey) {
+        <article class="group bg-white border border-line-strong flex flex-col hover:border-primary transition-colors overflow-hidden">
+          <div class="relative aspect-[16/10] overflow-hidden bg-bg-soft">
+            <img [src]="it.image" [alt]="t(it.titleKey)" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          </div>
+          <div class="p-6 flex flex-col gap-4 flex-1">
+            <div class="flex gap-3 text-xs text-muted font-display tracking-[0.08em]">
+              <time>{{ it.date }}</time>
+              <span>·</span>
+              <span>{{ it.views }} {{ t('news.views') }}</span>
+            </div>
+            <h3 class="font-display font-semibold text-ink leading-snug text-base flex-1">{{ t(it.titleKey) }}</h3>
+            <a routerLink="/tenders" class="font-display text-sm font-medium text-primary hover:text-primary-dark">{{ t('news.more') }} →</a>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+</ng-container>

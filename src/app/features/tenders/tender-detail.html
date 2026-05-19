@@ -1,0 +1,54 @@
+<ng-container *transloco="let t">
+@if (item(); as it) {
+  <article class="py-16">
+    <div class="container-site grid gap-10 lg:grid-cols-[1fr_320px] items-start">
+      <div>
+        <a routerLink="/tenders" class="inline-flex items-center gap-2 text-sm font-display font-medium text-primary hover:text-primary-dark">
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          {{ t('tendersList.backToAll') }}
+        </a>
+
+        <div class="mt-6 flex flex-wrap gap-3 items-center text-xs font-display tracking-[0.08em]">
+          <span class="px-2.5 py-1 uppercase font-semibold" [class]="statusColor(it.status)">{{ statusLabel(it.status) }}</span>
+          <time class="text-muted">{{ t('tendersList.published') }}: {{ it.date }}</time>
+          <span class="text-muted">·</span>
+          <span class="text-muted">{{ it.views }} {{ t('news.views') }}</span>
+        </div>
+
+        <h1 class="mt-4 font-display font-bold text-ink leading-[1.2] text-[clamp(1.8rem,3.5vw,2.4rem)]">{{ it.title }}</h1>
+
+        <img [src]="it.image" [alt]="it.title" class="mt-8 w-full aspect-[16/9] object-cover bg-bg-soft" />
+
+        <div class="mt-8 flex flex-col gap-5 text-ink-soft text-[1.05rem] leading-[1.8]">
+          @for (p of it.body; track $index) {
+            <p class="m-0">{{ p }}</p>
+          }
+        </div>
+      </div>
+
+      <aside class="bg-bg-soft border border-line p-6 flex flex-col gap-5">
+        <div>
+          <div class="font-display text-xs tracking-[0.18em] uppercase text-primary">{{ t('tendersList.deadline') }}</div>
+          <div class="mt-2 font-display font-bold text-ink text-2xl">{{ it.deadline }}</div>
+        </div>
+
+        <div class="border-t border-line pt-5">
+          <div class="font-display text-xs tracking-[0.18em] uppercase text-primary">{{ t('tendersList.contact') }}</div>
+          <div class="mt-3 flex flex-col gap-1.5 text-sm">
+            <span class="font-display font-semibold text-ink">{{ it.contact.name }}</span>
+            <a [href]="'tel:' + it.contact.phone" class="text-ink-soft hover:text-primary">{{ it.contact.phone }}</a>
+            <a [href]="'mailto:' + it.contact.email" class="text-ink-soft hover:text-primary">{{ it.contact.email }}</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </article>
+} @else {
+  <section class="py-24">
+    <div class="container-site">
+      <h1 class="font-display font-bold text-ink text-3xl">{{ t('tendersList.notFound') }}</h1>
+      <a routerLink="/tenders" class="mt-4 inline-block btn btn-accent">{{ t('tendersList.backToAll') }}</a>
+    </div>
+  </section>
+}
+</ng-container>

@@ -1,0 +1,25 @@
+<ng-container *transloco="let t">
+<section class="py-24 bg-bg-soft" id="reports">
+  <div class="container-site">
+    <div class="flex flex-wrap justify-between items-end gap-6">
+      <div class="max-w-[720px]">
+        <span class="section-tag">{{ t('reports.tag') }}</span>
+        <h2 class="font-display font-bold text-ink tracking-[-0.02em] leading-[1.15] text-[clamp(1.8rem,3vw,2.5rem)]">{{ t('reports.title') }}</h2>
+      </div>
+      <a href="#" class="btn btn-accent">{{ t('reports.all') }}</a>
+    </div>
+
+    <ul class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 list-none p-0">
+      @for (r of items; track r.year) {
+        <li>
+          <a [href]="r.href" class="group flex items-center gap-4 bg-white border border-line p-5 hover:border-primary transition-colors">
+            <span class="font-display font-bold text-accent text-2xl tabular-nums shrink-0">{{ r.year }}</span>
+            <span class="flex-1 font-display font-medium text-ink text-[15px] leading-snug">{{ t(r.titleKey) }}</span>
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-primary shrink-0 transition-transform group-hover:translate-y-0.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          </a>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
+</ng-container>

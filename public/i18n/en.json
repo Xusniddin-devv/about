@@ -1,0 +1,203 @@
+{
+  "header": {
+    "about": "About"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "news": "News",
+    "tenders": "Tenders",
+    "gallery": "Gallery",
+    "structure": "Structure",
+    "leadership": "Leadership",
+    "contacts": "Contacts"
+  },
+  "aboutMenu": {
+    "legalStatus": "Legal status",
+    "info": "About the company",
+    "structure": "Structure",
+    "leadership": "Leadership",
+    "executive": "Executive office",
+    "advisors": "Chairman's advisors",
+    "systemEnterprises": "System enterprises",
+    "vacancies": "Vacancies & qualifications"
+  },
+  "hero": {
+    "meta1": "Uzbekhydroenergo",
+    "meta2": "JSC · since 1990",
+    "titleA": "Engineering the water",
+    "titleB": "and energy",
+    "titleC": "of tomorrow",
+    "lead": "Full-cycle engineering centre for hydropower, reservoirs, dams and irrigation networks across Uzbekistan.",
+    "cta1": "Priority directions",
+    "cta2": "News →"
+  },
+  "stats": {
+    "ongoing": "Ongoing projects",
+    "prospective": "Prospective projects",
+    "completed": "Completed projects"
+  },
+  "priorities": {
+    "tag": "Activity areas",
+    "title": "Priority directions",
+    "p1Title": "Electricity generation",
+    "p1Text": "Stable and efficient HPP operation across the country.",
+    "p2Title": "HPP operation & safety",
+    "p2Text": "Technical state monitoring, preventive maintenance and operational safety.",
+    "p3Title": "Construction & modernisation",
+    "p3Text": "New capacity, reconstruction and expansion of existing facilities.",
+    "p4Title": "Investment projects",
+    "p4Text": "Major projects with international financial institutions and private partners.",
+    "p5Title": "Reservoir & dam safety",
+    "p5Text": "Continuous safety monitoring of hydraulic structures.",
+    "p6Title": "Autumn–winter preparation",
+    "p6Text": "Seasonal load planning and energy resource reserves."
+  },
+  "gesMap": {
+    "tag": "HPP geography",
+    "title": "HPP locations on the map",
+    "sub": "Hydropower stations across 14 regions and Tashkent city.",
+    "capacity": "Capacity",
+    "count": "HPP count",
+    "mw": "MW",
+    "unit": "units",
+    "noData": "No data",
+    "totalCapacity": "Total capacity",
+    "totalCount": "Total HPPs"
+  },
+  "regions": {
+    "karakalpakstan": "Republic of Karakalpakstan",
+    "fergana": "Fergana region",
+    "tashkentOblast": "Tashkent region",
+    "tashkentCity": "Tashkent city",
+    "namangan": "Namangan region",
+    "andijan": "Andijan region",
+    "syrdarya": "Syrdarya region",
+    "jizzakh": "Jizzakh region",
+    "samarkand": "Samarkand region",
+    "kashkadarya": "Kashkadarya region",
+    "surkhandarya": "Surkhandarya region",
+    "navoi": "Navoi region",
+    "bukhara": "Bukhara region",
+    "khorezm": "Khorezm region"
+  },
+  "news": {
+    "tag": "News",
+    "title": "Latest news",
+    "all": "All →",
+    "more": "Read more",
+    "views": "views",
+    "totalLabel": "news items",
+    "backToAll": "Back to all news",
+    "related": "Related news",
+    "notFound": "News item not found",
+    "n1": "PP–163 projects in Fergana region",
+    "n2": "AI-based reservoir inflow forecasting system",
+    "n3": "Critical analytical meeting with investment complex staff"
+  },
+  "subOrgs": {
+    "tag": "System",
+    "title": "Organizations in the system",
+    "o1": "Joint-stock companies",
+    "o2": "Hydropower stations",
+    "o3": "Design institute",
+    "o4": "Repair & modernisation centre",
+    "o5": "Personnel training centre",
+    "o6": "Technical service department"
+  },
+  "wind": {
+    "tag": "Alternative energy",
+    "title": "Wind power station project",
+    "firstLabel": "First in the country",
+    "firstTitle": "September 2017 — first experimental wind unit",
+    "firstText": "Uzbekhydroenergo JSC installed the first experimental wind energy unit in Tashkent region.",
+    "grantLabel": "Grant funding",
+    "grantTitle": "January 2026 — 4 wind stations",
+    "grantText": "Uzbekhydroenergo JSC installed 4 wind stations under a grant programme.",
+    "more": "Read more"
+  },
+  "tendersList": {
+    "tag": "Tenders & announcements",
+    "title": "Open tenders",
+    "all": "All →",
+    "totalLabel": "tenders",
+    "backToAll": "Back to all tenders",
+    "published": "Published",
+    "deadline": "Deadline",
+    "contact": "Contact",
+    "notFound": "Tender not found",
+    "t1": "Preliminary call for commercial proposals (2026-05-18)",
+    "t2": "Call for proposals: information system (IS) development",
+    "t3": "Uzbekhydroenergo JSC preliminary selection call"
+  },
+  "reports": {
+    "tag": "Reports",
+    "title": "Annual & financial reports",
+    "all": "All →",
+    "download": "Download",
+    "r1": "Annual report 2025",
+    "r2": "Financial report 2024",
+    "r3": "Sustainability report 2023"
+  },
+  "gallery": {
+    "tag": "Gallery",
+    "title": "Our facilities in photos",
+    "all": "All →",
+    "p1": "Khujakent HPP",
+    "p2": "Kamolot HPP",
+    "p3": "Administrative building",
+    "p4": "Naryn HPP-1"
+  },
+  "cta": {
+    "trustLabel": "Trust line",
+    "title": "Get in touch",
+    "sub": "High quality and quick response — call the trust line or send us an email.",
+    "callsTotal": "Total calls",
+    "excellent": "Excellent",
+    "good": "Good",
+    "fair": "Fair",
+    "btn": "Send email"
+  },
+  "footer": {
+    "tag": "Hydropower and water infrastructure — since 1990.",
+    "contacts": "Contacts",
+    "langs": "Languages",
+    "copy": "Uzbekhydroenergo JSC. All rights reserved.",
+    "sub": "Built with engineering precision."
+  },
+  "location": {
+    "addressVal": "Tashkent, Bobur St., 20"
+  },
+  "contacts": {
+    "title": "Get in touch",
+    "sub": "For partnership, questions and suggestions — use the contacts below.",
+    "addressLabel": "Address",
+    "phoneLabel": "Phone",
+    "trustLabel": "Trust line",
+    "faxLabel": "Fax",
+    "hoursLabel": "Working hours",
+    "emailLabel": "Email",
+    "pressLabel": "Press service",
+    "openMap": "Open in Maps →",
+    "mapTitle": "Head office location",
+    "mapLoading": "Loading map…",
+    "formTag": "Contact form",
+    "formTitle": "Send us a message",
+    "formSub": "Fill the form — we respond within two working days.",
+    "fName": "Name",
+    "fEmail": "Email",
+    "fPhone": "Phone",
+    "fSubject": "Subject",
+    "fMessage": "Message",
+    "fNameError": "Name must be at least 2 characters",
+    "fEmailError": "Enter a valid email address",
+    "fSubjectError": "Subject must be at least 3 characters",
+    "fMessageError": "Message must be at least 10 characters",
+    "formErrorBanner": "Please fill in the required fields.",
+    "submit": "Send",
+    "requiredHint": "Required fields",
+    "successTitle": "Message sent!",
+    "successText": "Thank you. We'll be in touch shortly.",
+    "sendAnother": "Send another"
+  }
+}

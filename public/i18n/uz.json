@@ -1,0 +1,203 @@
+{
+  "header": {
+    "about": "Jamiyat haqida"
+  },
+  "nav": {
+    "home": "Bosh sahifa",
+    "about": "Jamiyat to‘g‘risida",
+    "news": "Yangiliklar",
+    "tenders": "Tender va e'lonlar",
+    "gallery": "Foto galereya",
+    "structure": "Tuzilma",
+    "leadership": "Rahbariyat",
+    "contacts": "Aloqa"
+  },
+  "aboutMenu": {
+    "legalStatus": "Yuridik maqomi",
+    "info": "Jamiyat haqida",
+    "structure": "Tuzilma",
+    "leadership": "Rahbariyat",
+    "executive": "Ijro apparati",
+    "advisors": "Boshqaruv raisi maslahatchilari",
+    "systemEnterprises": "Tizim korxonalari",
+    "vacancies": "Bo‘sh o‘rinlari va malaka talablari"
+  },
+  "hero": {
+    "meta1": "O‘zbekgidroenergo",
+    "meta2": "AJ · 1990-yildan beri",
+    "titleA": "Suv va energiyani",
+    "titleB": "ertangi kunga",
+    "titleC": "loyihalaymiz",
+    "lead": "Gidroenergetika, suv omborlari, to‘g‘onlar va sug‘orish tarmoqlari bo‘yicha to‘liq tsikldagi muhandislik markazi.",
+    "cta1": "Ustuvor yo‘nalishlar",
+    "cta2": "Yangiliklar →"
+  },
+  "stats": {
+    "ongoing": "Joriy loyihalar",
+    "prospective": "Istiqbolli loyihalar",
+    "completed": "Yakunlangan loyihalar"
+  },
+  "priorities": {
+    "tag": "Faoliyat yo‘nalishlari",
+    "title": "Ustuvor yo‘nalishlar",
+    "p1Title": "Elektr energiya ishlab chiqarish",
+    "p1Text": "Mamlakat bo‘ylab GESlar barqaror va samarali ishlab chiqarishini ta'minlash.",
+    "p2Title": "GESlar ekspluatatsiyasi va xavfsizligi",
+    "p2Text": "Texnik holat monitoringi, profilaktika va texnologik xavfsizlik bo‘yicha kompleks chora-tadbirlar.",
+    "p3Title": "Qurilish va modernizatsiya loyihalari",
+    "p3Text": "Yangi quvvatlarni qurish, mavjud obyektlarni zamonaviylashtirish va kengaytirish loyihalari.",
+    "p4Title": "Investitsiya loyihalari",
+    "p4Text": "Xalqaro moliya institutlari va xususiy hamkorlar bilan birgalikda yirik loyihalar.",
+    "p5Title": "Suv omborlari va to‘g‘onlar xavfsizligi",
+    "p5Text": "Gidrotexnik inshootlarning xavfsizligini doimiy nazorat qilish va texnik holatini saqlash.",
+    "p6Title": "Kuz-qish mavsumiga tayyorgarlik",
+    "p6Text": "Mavsumiy yuklamalarga tayyorgarlik, energetik resurslarni rejalashtirish va zaxiralash."
+  },
+  "gesMap": {
+    "tag": "GESlar geografiyasi",
+    "title": "Xaritada GESlarning joylashuvi",
+    "sub": "Respublika bo‘ylab 14 hudud va Toshkent shahrida joylashgan gidroelektrostansiyalar.",
+    "capacity": "Quvvati",
+    "count": "GESlar soni",
+    "mw": "MVt",
+    "unit": "ta",
+    "noData": "Ma'lumot yo‘q",
+    "totalCapacity": "Umumiy quvvat",
+    "totalCount": "Jami GESlar soni"
+  },
+  "regions": {
+    "karakalpakstan": "Qoraqalpog‘iston Respublikasi",
+    "fergana": "Farg‘ona viloyati",
+    "tashkentOblast": "Toshkent viloyati",
+    "tashkentCity": "Toshkent shahri",
+    "namangan": "Namangan viloyati",
+    "andijan": "Andijon viloyati",
+    "syrdarya": "Sirdaryo viloyati",
+    "jizzakh": "Jizzax viloyati",
+    "samarkand": "Samarqand viloyati",
+    "kashkadarya": "Qashqadaryo viloyati",
+    "surkhandarya": "Surxondaryo viloyati",
+    "navoi": "Navoiy viloyati",
+    "bukhara": "Buxoro viloyati",
+    "khorezm": "Xorazm viloyati"
+  },
+  "news": {
+    "tag": "Yangiliklar",
+    "title": "So‘nggi yangiliklar",
+    "all": "Barchasi →",
+    "more": "Batafsil",
+    "views": "ko‘rishlar",
+    "totalLabel": "ta yangilik",
+    "backToAll": "Barcha yangiliklarga qaytish",
+    "related": "O‘xshash yangiliklar",
+    "notFound": "Yangilik topilmadi",
+    "n1": "PQ–163-son qarori mazmuniga doir: Farg‘ona viloyatida amalga oshiriladigan loyihalar",
+    "n2": "Sun'iy intellekt yordamida suv omborlariga kelishi kutilayotgan suvlarni prognoz qilish tizimi",
+    "n3": "Investitsiya kompleksi xodimlari bilan tanqidiy-tahliliy yig‘ilish"
+  },
+  "subOrgs": {
+    "tag": "Tizim",
+    "title": "Jamiyat tizimidagi tashkilotlar",
+    "o1": "Aksiyadorlik jamiyatlari",
+    "o2": "GESlar",
+    "o3": "Loyihalash instituti",
+    "o4": "Ta'mir va modernizatsiya markazi",
+    "o5": "Kadrlar tayyorlash markazi",
+    "o6": "Texnik xizmat ko‘rsatish bo‘limi"
+  },
+  "wind": {
+    "tag": "Muqobil energiya",
+    "title": "Shamol elektr stansiyalari loyihasi",
+    "firstLabel": "Mamlakatimizda ilk bor",
+    "firstTitle": "2017-yil sentabr — birinchi tajriba shamol qurilmasi",
+    "firstText": "Toshkent viloyatida “O‘zbekgidroenergo” AJ tomonidan eng birinchi tajriba shamol energetik qurilmasi (SHEQ) o‘rnatildi.",
+    "grantLabel": "Beg‘araz grant mablag‘i",
+    "grantTitle": "2026-yil yanvar — 4 ta shamol stansiyasi",
+    "grantText": "“O‘zbekgidroenergo” AJ tomonidan beg‘araz grant mablag‘i evaziga 4 ta shamol stansiyasi o‘rnatildi.",
+    "more": "Batafsil"
+  },
+  "tendersList": {
+    "tag": "Tender va e'lonlar",
+    "title": "Joriy tanlovlar",
+    "all": "Barchasi →",
+    "totalLabel": "ta tender",
+    "backToAll": "Barcha tenderlarga qaytish",
+    "published": "E'lon qilingan",
+    "deadline": "Topshirish muddati",
+    "contact": "Aloqa shaxsi",
+    "notFound": "Tender topilmadi",
+    "t1": "Xizmatlarning boshlang‘ich bahosini aniqlash uchun dastlabki tanlov (2026-05-18)",
+    "t2": "Axborot tizimi (IS) ishlab chiqish uchun dastlabki tijorat takliflari yig‘imi",
+    "t3": "“O‘zbekgidroenergo” AJ boshlang‘ich bahosini aniqlash uchun dastlabki tanlov"
+  },
+  "reports": {
+    "tag": "Hisobotlar",
+    "title": "Yillik va moliyaviy hisobotlar",
+    "all": "Barchasi →",
+    "download": "Yuklab olish",
+    "r1": "2025-yilgi yillik hisobot",
+    "r2": "2024-yilgi moliyaviy hisobot",
+    "r3": "2023-yilgi barqarorlik hisoboti"
+  },
+  "gallery": {
+    "tag": "Foto galereya",
+    "title": "Obyektlarimiz suratlarda",
+    "all": "Barchasi →",
+    "p1": "Xo‘jakent GES",
+    "p2": "Kamolot GESi",
+    "p3": "Ma'muriy bino",
+    "p4": "Norin GES-1"
+  },
+  "cta": {
+    "trustLabel": "Ishonch telefoni",
+    "title": "Bizga murojaat qiling",
+    "sub": "Yuqori sifat va tezkor javob — ishonch telefoni orqali bog‘laning yoki xat yuboring.",
+    "callsTotal": "Jami qo‘ng‘iroqlar",
+    "excellent": "A'lo",
+    "good": "Yaxshi",
+    "fair": "Qoniqarli",
+    "btn": "Xat yuborish"
+  },
+  "footer": {
+    "tag": "Gidroenergetika va suv infratuzilmasi — 1990-yildan beri.",
+    "contacts": "Aloqa",
+    "langs": "Tillar",
+    "copy": "“O‘zbekgidroenergo” AJ. Barcha huquqlar himoyalangan.",
+    "sub": "Muhandislik aniqligi bilan ishlab chiqilgan."
+  },
+  "location": {
+    "addressVal": "Toshkent, Bobur ko‘chasi, 20"
+  },
+  "contacts": {
+    "title": "Biz bilan bog‘lanish",
+    "sub": "Hamkorlik, savol va takliflar uchun quyidagi ma'lumotlardan foydalaning.",
+    "addressLabel": "Manzil",
+    "phoneLabel": "Telefon",
+    "trustLabel": "Ishonch telefoni",
+    "faxLabel": "Faks",
+    "hoursLabel": "Ish vaqti",
+    "emailLabel": "Elektron pochta",
+    "pressLabel": "Matbuot xizmati",
+    "openMap": "Xaritada ochish →",
+    "mapTitle": "Bosh ofis xaritasi",
+    "mapLoading": "Xarita yuklanmoqda…",
+    "formTag": "Aloqa formasi",
+    "formTitle": "Bizga xabar yuboring",
+    "formSub": "Formani to‘ldiring — ikki ish kuni ichida javob beramiz.",
+    "fName": "Ism",
+    "fEmail": "Elektron pochta",
+    "fPhone": "Telefon",
+    "fSubject": "Mavzu",
+    "fMessage": "Xabar",
+    "fNameError": "Ism kamida 2 ta belgidan iborat bo‘lishi kerak",
+    "fEmailError": "To‘g‘ri elektron pochta manzilini kiriting",
+    "fSubjectError": "Mavzu kamida 3 ta belgidan iborat bo‘lishi kerak",
+    "fMessageError": "Xabar kamida 10 ta belgidan iborat bo‘lishi kerak",
+    "formErrorBanner": "Iltimos, majburiy maydonlarni to‘ldiring.",
+    "submit": "Yuborish",
+    "requiredHint": "Majburiy maydonlar",
+    "successTitle": "Xabar yuborildi!",
+    "successText": "Rahmat. Tez orada javob beramiz.",
+    "sendAnother": "Yana yuborish"
+  }
+}

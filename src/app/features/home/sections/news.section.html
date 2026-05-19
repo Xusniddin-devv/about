@@ -1,0 +1,32 @@
+<ng-container *transloco="let t">
+<section class="py-24 bg-bg-soft" id="news">
+  <div class="container-site">
+    <div class="flex flex-wrap justify-between items-end gap-6 max-w-full">
+      <div class="max-w-[720px]">
+        <span class="section-tag">{{ t('news.tag') }}</span>
+        <h2 class="font-display font-bold text-ink tracking-[-0.02em] leading-[1.15] text-[clamp(1.8rem,3vw,2.5rem)]">{{ t('news.title') }}</h2>
+      </div>
+      <a routerLink="/news" class="btn btn-accent">{{ t('news.all') }}</a>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+      @for (n of items; track n.titleKey) {
+        <article class="group bg-white border border-line flex flex-col hover:border-primary transition-colors overflow-hidden">
+          <div class="relative aspect-[16/10] overflow-hidden bg-bg-soft">
+            <img [src]="n.image" [alt]="t(n.titleKey)" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          </div>
+          <div class="p-6 flex flex-col gap-4 flex-1">
+            <div class="flex gap-3 text-xs text-muted font-display tracking-[0.08em]">
+              <time>{{ n.date }}</time>
+              <span>·</span>
+              <span>{{ n.views }} {{ t('news.views') }}</span>
+            </div>
+            <h3 class="font-display font-semibold text-ink leading-snug text-base flex-1">{{ t(n.titleKey) }}</h3>
+            <a routerLink="/news" class="font-display text-sm font-medium text-primary hover:text-primary-dark">{{ t('news.more') }} →</a>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+</ng-container>

@@ -1,0 +1,36 @@
+<ng-container *transloco="let t">
+<section class="py-24" id="ges-map">
+  <div class="container-site">
+    <div class="max-w-[720px]">
+      <span class="section-tag">{{ t('gesMap.tag') }}</span>
+      <h2 class="font-display font-bold text-ink tracking-[-0.02em] leading-[1.15] text-[clamp(1.8rem,3vw,2.5rem)]">{{ t('gesMap.title') }}</h2>
+      <p class="text-ink-soft text-[1.05rem] leading-[1.65] max-w-[640px] mt-4">{{ t('gesMap.sub') }}</p>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-line-strong border border-line-strong">
+      @for (r of regions; track r.nameKey) {
+        <div class="bg-white p-5 flex flex-col gap-1.5">
+          <div class="font-display font-semibold text-ink text-[15px]">{{ t(r.nameKey) }}</div>
+          @if (r.capacityMw !== null) {
+            <div class="text-ink-soft text-sm">{{ t('gesMap.capacity') }}: <span class="font-medium text-ink">{{ formatMw(r.capacityMw) }} {{ t('gesMap.mw') }}</span></div>
+            <div class="text-ink-soft text-sm">{{ t('gesMap.count') }}: <span class="font-medium text-ink">{{ r.count }} {{ t('gesMap.unit') }}</span></div>
+          } @else {
+            <div class="text-muted text-sm italic">{{ t('gesMap.noData') }}</div>
+          }
+        </div>
+      }
+    </div>
+
+    <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 bg-ink text-white p-6 gap-2">
+      <div>
+        <div class="font-display text-xs tracking-[0.18em] uppercase text-accent">{{ t('gesMap.totalCapacity') }}</div>
+        <div class="font-display font-bold text-2xl mt-1">{{ formatMw(total.capacityMw) }} {{ t('gesMap.mw') }}</div>
+      </div>
+      <div>
+        <div class="font-display text-xs tracking-[0.18em] uppercase text-accent">{{ t('gesMap.totalCount') }}</div>
+        <div class="font-display font-bold text-2xl mt-1">{{ total.count }} {{ t('gesMap.unit') }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+</ng-container>

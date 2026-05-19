@@ -1,0 +1,16 @@
+<ng-container *transloco="let t">
+<section class="py-24" id="sub-orgs">
+  <div class="container-site">
+    <div class="max-w-[720px]">
+      <span class="section-tag">{{ t('subOrgs.tag') }}</span>
+      <h2 class="font-display font-bold text-ink tracking-[-0.02em] leading-[1.15] text-[clamp(1.8rem,3vw,2.5rem)]">{{ t('subOrgs.title') }}</h2>
+    </div>
+
+    <ul class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 list-none p-0 m-0">
+      @for (o of orgs; track o.nameKey) {
+        <li class="px-5 py-4 bg-bg-soft border-l-4 border-primary text-ink font-medium text-[15px]">{{ t(o.nameKey) }}</li>
+      }
+    </ul>
+  </div>
+</section>
+</ng-container>

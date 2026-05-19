@@ -1,0 +1,29 @@
+<ng-container *transloco="let t">
+<section class="py-24 bg-bg-soft" id="priorities">
+  <div class="container-site">
+    <div class="max-w-[720px]">
+      <span class="section-tag">{{ t('priorities.tag') }}</span>
+      <h2 class="font-display font-bold text-ink tracking-[-0.02em] leading-[1.15] text-[clamp(1.8rem,3vw,2.5rem)]">{{ t('priorities.title') }}</h2>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-line-strong">
+      @for (it of items; track it.num) {
+        <article class="px-9 pt-10 pb-11 border-r border-b border-line-strong bg-white/40 hover:bg-primary/5 transition-colors">
+          <div class="w-12 h-12 inline-flex items-center justify-center text-accent mb-4">
+            @switch (it.icon) {
+              @case ('bolt')   { <svg viewBox="0 0 24 24" class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg> }
+              @case ('shield') { <svg viewBox="0 0 24 24" class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg> }
+              @case ('crane')  { <svg viewBox="0 0 24 24" class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l8-4v4h10v13"/><path d="M3 21h18M11 8v13M14 12h4M14 16h4"/></svg> }
+              @case ('chart')  { <svg viewBox="0 0 24 24" class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10m4 11V6m4 15v-9m4 9V3m4 18v-7"/></svg> }
+              @case ('wave')   { <svg viewBox="0 0 24 24" class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2M2 18c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2"/></svg> }
+              @case ('snow')   { <svg viewBox="0 0 24 24" class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/></svg> }
+            }
+          </div>
+          <h3 class="font-display text-[1.05rem] font-semibold text-ink mb-3 tracking-[-0.01em] leading-snug">{{ t(it.titleKey) }}</h3>
+          <p class="text-ink-soft leading-[1.6] text-[0.95rem] m-0">{{ t(it.textKey) }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+</ng-container>
